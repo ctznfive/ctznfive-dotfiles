@@ -40,7 +40,5 @@ You can use configuration files without any restrictions.
 
 
 # Screenshots
-![screen1](screen.png)
+![screen1](screen1.png)
 ![screen2](screen2.png)
-![screen3](screen3.png)
-![screen4](screen4.png)
