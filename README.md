@@ -32,9 +32,9 @@ You can use configuration files without any restrictions.
 | **PDF Viewer**           | zathura                    										                             |
 | **Web Browser**          | firefox / eww                 										                             |
 | **Office Suite**           | libreoffice                     										                             |
-| **Brainstorming**        | libreoffice draw                    										                             |
+| **Brainstorming**        | orgmode / libreoffice draw                    										                             |
 | **Backup Solution**      | rsync + clonezilla                    										                             |
-| **GTD System & Notes**   | org-mode                    										                             |
+| **GTD System & Notes**   | orgmode                    										                             |
 | **Hosted Hypervisor**   | virtualbox / qemu  |
 | **Password Manager**   | pass / orgmode  |
 
