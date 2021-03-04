@@ -22,7 +22,7 @@ You can use configuration files without any restrictions.
 | **Terminal Multiplexer** | tmux                                                              				|
 | **Launcher**             | rofi / dmenu                                                                           |
 | **Text Editor**          | emacs / vim                                                                                                      |
-| **File Manager**		       | zsh+fzf / dired / ranger                                                                                          |
+| **File Manager**		       | zsh + fzf / dired / ranger                                                                                          |
 | **Image Viewer**         | feh                                                                 |    
 | **Music & Video Player** | mpv                                                                                                   |
 | **Screenshot App**       | scrot                                                    |
@@ -34,7 +34,7 @@ You can use configuration files without any restrictions.
 | **Office Suite**           | libreoffice                     										                             |
 | **Brainstorming**        | orgmode / libreoffice draw                    										                             |
 | **Backup Solution**      | rsync + clonezilla                    										                             |
-| **GTD System & Notes**   | orgmode                    										                             |
+| **GTD, PIM & Notes**   | orgmode                    										                             |
 | **Hosted Hypervisor**   | virtualbox / qemu  |
 | **Password Manager**   | pass / orgmode  |
 
