@@ -20,7 +20,7 @@ You can use configuration files without any restrictions.
 | **Shell**                | zsh + oh my zsh                                                                                                        |
 | **Terminal Emulator**    | rxvt-unicode                                                              				|
 | **Terminal Multiplexer** | tmux                                                              				|
-| **Launcher**             | rofi                                                                            |
+| **Launcher**             | rofi / dmenu                                                                           |
 | **Text Editor**          | emacs / vim                                                                                                      |
 | **File Manager**		       | zsh+fzf / dired / ranger                                                                                          |
 | **Image Viewer**         | feh                                                                 |    
