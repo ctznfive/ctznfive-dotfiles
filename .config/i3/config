@@ -1,0 +1,204 @@
+# set modifier
+set $super Mod4
+set $alt Mod1
+
+# gaps
+#gaps inner 15
+#gaps outer 1
+#for_window [class="^.*"] border pixel 2
+
+# hide edge borders
+hide_edge_borders smart
+
+# set font
+font pango: Roboto Bold 10
+
+# use Mouse+$super to drag floating windows to their wanted position
+floating_modifier $super
+
+# autostart
+#exec --no-startup-id compton
+exec --no-startup-id xrandr --output VGA1 --auto --left-of LVDS1
+#exec_always --no-startup-id "xautolock -time 10 -locker 'i3lock -c 000000' &"
+exec_always --no-startup-id numlockx &
+exec --no-startup-id dunst
+exec --no-startup-id xsettingsd &
+exec --no-startup-id unclutter &
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+#exec --no-startup-id xset s noblank
+exec --no-startup-id xrdb .Xresources &
+exec --no-startup-id udiskie -an &
+exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id nm-applet
+exec --no-startup-id redshift
+exec --no-startup-id goldendict
+exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
+exec --no-startup-id i3-msg 'workspace 2; exec emacs'
+exec --no-startup-id i3-msg 'workspace 10; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace 10; exec telegram-desktop -startintray'
+
+# scratchpad
+bindsym $super+e scratchpad show
+bindsym $super+Shift+e move scratchpad
+
+# layouts
+exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle ctrl:nocaps"
+
+# start a terminal
+bindsym $super+Return exec urxvt
+
+# lock screen
+#bindsym $super+Delete exec --no-startup-id "i3lock -c 000000"
+
+# start dmenu/rofi
+bindsym $super+d exec rofi -lines 12 -padding 20 -width 50 -location 0 -show drun -columns 4 -font 'Noto Sans 14' -hide-scrollbar
+bindsym $super+shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -sb '#60ace0' -sf '#1a1a1b' -fn 'Roboto:size=12'"
+
+# common apps keybind
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym $super+F1 workspace 2; exec emacsclient -c; focus
+bindsym $super+F2 workspace 10; exec firefox; focus
+bindsym $super+F3 workspace 9; exec telegram-desktop; focus
+bindsym $super+F4 workspace 9; exec urxvt -e mutt; focus
+bindsym $super+F5 exec passmenu
+bindsym $super+Shift+n exec xrandr --output DP-1 --brightness 0.8 # night mode
+bindsym $super+Shift+b exec xrandr --output DP-1 --brightness 1.0 # day mode
+bindsym $super+i exec urxvt -e vim '+normal G2o' +.\!date '+normal o' +startinsert ~/inbox/inbox.txt
+
+# change volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec amixer set Master toggle
+#bindsym $super+equal exec amixer -q set Master 1%+
+#bindsym $super+minus exec amixer -q set Master 1%-
+bindsym $super+equal exec pactl set-sink-volume 0 +1%
+bindsym $super+minus exec pactl set-sink-volume 0 -1%
+
+# music control
+#bindsym $super+b exec mocp -r
+#bindsym $super+n exec mocp -f
+#bindsym $super+p exec mocp -G
+
+# media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+
+# screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+# kill focused window
+bindsym $super+Shift+q kill
+bindsym $alt+F4 kill
+
+# change focus
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
+
+# move focused window
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
+
+# split in horizontal orientation
+bindsym $super+g split h
+
+# split in vertical orientation
+bindsym $super+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $super+f fullscreen toggle
+
+# change container layout split
+bindsym $super+s layout toggle split
+
+# toggle tiling / floating
+bindsym $super+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $super+Shift+space focus mode_toggle
+
+# switch to workspace
+bindsym $alt+Control+l workspace next
+bindsym $alt+Control+h workspace prev
+bindsym $super+1 workspace 1
+bindsym $super+2 workspace 2
+bindsym $super+3 workspace 3
+bindsym $super+4 workspace 4
+bindsym $super+5 workspace 5
+bindsym $super+6 workspace 6
+bindsym $super+7 workspace 7
+bindsym $super+8 workspace 8
+bindsym $super+9 workspace 9
+bindsym $super+0 workspace 10
+
+# Move focused container to workspace
+bindsym $super+Shift+1 move container to workspace 1
+bindsym $super+Shift+2 move container to workspace 2
+bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+4 move container to workspace 4
+bindsym $super+Shift+5 move container to workspace 5
+bindsym $super+Shift+6 move container to workspace 6
+bindsym $super+Shift+7 move container to workspace 7
+bindsym $super+Shift+8 move container to workspace 8
+bindsym $super+Shift+9 move container to workspace 9
+bindsym $super+Shift+0 move container to workspace 10
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $super+Shift+r restart
+
+# exit i3
+# bindsym $super+q exec "i3-nagbar -t warning -m 'Exit?' -b 'Yes' 'i3-msg exit'"
+mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+  bindsym l exec i3-msg exit
+  bindsym r exec systemctl reboot
+  bindsym s exec systemctl shutdown
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+bindsym $super+Shift+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+}
+bindsym $super+r mode "resize"
+
+# panel
+bar {
+	position top
+    tray_output none # disable the systemtray completely
+	colors {
+        background #1a1a1b
+        statusline #aaaaaa
+        separator #1a1a1b
+
+		# colour of border, background, and text
+        focused_workspace	#2f343f	#60ace0	#1a1a1b
+        active_workspace	#2f343f	#2f343f	#d8dee8
+        inactive_workspace	#1a1a1b	#1a1a1b	#d8dee8
+        urgent_workspace	#2f343f	#ebcb8b	#2f343f
+    }
+        status_command i3blocks
+}
+
+for_window [class=".*"] border pixel 4
+
+# colour of border, background, text, indicator, and child_border
+client.focused			#60ace0 #2f343f #d8dee8 #60ace0 #777777
+client.focused_inactive	#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
+client.unfocused		#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
+client.urgent			#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
+client.placeholder		#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
+client.background		#1a1a1b

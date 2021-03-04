@@ -1,0 +1,141 @@
+! ------------------------------------------------------------------------------
+! Colour Configuration
+! ------------------------------------------------------------------------------
+
+URxvt*.transparent: true
+!URxvt*.shading: 15
+
+! special
+*.foreground:   #eeeeee
+*.background:   #1a1a1b
+*.cursorColor:  #60ace0
+
+! black
+*.color0:       #1a1a1b
+*.color8:       #747369
+
+! red
+*.color1:       #f2777a
+*.color9:       #f2777a
+
+! green
+*.color2:       #99cc99
+*.color10:      #cfefcf
+
+! yellow
+*.color3:       #ffb1d5
+*.color11:      #ffc1de
+
+! blue
+*.color4:       #6699cc
+*.color12:      #b3d9ff
+
+! magenta
+*.color5:       #f7c4f7
+*.color13:      #ecc7ec
+
+! cyan
+*.color6:       #6ad5d5
+*.color14:      #8fd0e5
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+
+
+! ------------------------------------------------------------------------------
+! Font configuration
+! ------------------------------------------------------------------------------
+!xft:IBM Plex Mono:style=Medium:size=14
+!URxvt.font:         xft:IBM Plex Mono:style=Medium:size=14
+!URxvt.boldFont:     xft:IBM Plex Mono:style=Bold:size=14
+!URxvt.italicFont:   xft:IBM Plex Mono:style=Italic:size=14
+!URxvt.boldItalicFont:   xft:IBM Plex Mono:style=Bold Italic:size=14
+URxvt.font:         xft:Iosevka Semibold Extended:style=Regular:size=15.5
+URxvt.boldFont:     xft:Iosevka Extended:style=Bold:size=15.5
+URxvt.italicFont:   xft:Iosevka Extended:style=Italic:size=15.5
+URxvt.boldItalicFont:   xft:Iosevka Extended:style=Bold Italic:size=15.5
+
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! ------------------------------------------------------------------------------
+! URxvt configs
+! ------------------------------------------------------------------------------
+
+! font spacing
+URxvt*letterSpace:		-1
+URxvt.lineSpace:		1
+
+! general settings
+URxvt*saveline:			15000
+URxvt*termName:         rxvt-unicode-256color
+URxvt*iso14755:			false
+URxvt*urgentOnBell:		true
+URxvt.cursorBlink: 0
+
+! appearance
+URxvt*depth:			24
+URxvt*scrollBar:		false
+URxvt*scrollBar_right:	false
+URxvt*internalBorder:	8
+URxvt*externalBorder:	0
+!URxvt.geometry:			84x22
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+! perl extensions
+URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+
+! macros for clipboard and selection
+URxvt.copyCommand:		xclip -i -selection clipboard
+URxvt.pasteCommand:		xclip -o -selection clipboard
+URxvt.keysym.M-c:		perl:clipboard:copy
+URxvt.keysym.M-v:		perl:clipboard:paste
+URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape:	perl:keyboard-select:activate
+URxvt.keysym.M-s:		perl:keyboard-select:search
+URxvt.keysym.M-u:		perl:url-select:select_next
+URxvt.urlLauncher:		firefox
+URxvt.underlineURLs:	true
+URxvt.urlButton:		1     
+
+! scroll one line
+URxvt.keysym.Shift-Up:		command:\033]720;1\007
+URxvt.keysym.Shift-Down:	command:\033]721;1\007
+
+! control arrow
+!URxvt.keysym.Control-Up:	\033[1;5A
+!URxvt.keysym.Control-Down:	\033[1;5B
+!URxvt.keysym.Control-Right:	\033[1;5C
+!URxvt.keysym.Control-Left:	\033[1;5D
+
+! ------------------------------------------------------------------------------
+! Rofi configs
+! ------------------------------------------------------------------------------
+
+rofi.color-enabled: true
+rofi.color-window: #1a1a1b, #1a1a1b, #1a1a1b
+rofi.color-normal: #1a1a1b, #d8dee9, #1a1a1b, #1a1a1b, #60ace0
+rofi.color-active: #1a1a1b, #b48ead, #1a1a1b, #1a1a1b, #93e5cc
+rofi.color-urgent: #1a1a1b, #ebcb8b, #1a1a1b, #1a1a1b, #ebcb8b
+rofi.modi: run,drun,window
+
+! ------------------------------------------------------------------------------
+! Dmenu configs
+! ------------------------------------------------------------------------------
+
+dmenu.selforeground:	    #d8dee9
+dmenu.background:	        #1a1a1b
+dmenu.selbackground:	    #60ace0
+dmenu.foreground:	        #ffffff
+
+Xcursor.size: 24

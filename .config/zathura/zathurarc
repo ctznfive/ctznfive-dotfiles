@@ -1,0 +1,34 @@
+set selection-clipboard clipboard
+set scroll-step 100
+set font "inconsolata 12"
+set window-title-basename "true"
+set statusbar-basename "true"
+#set smooth-scroll true
+set default-bg "#1d1d1e"
+set statusbar-bg "#323232"
+
+# Dark Mode
+#set recolor true
+set recolor-darkcolor "#eeeeee"
+set recolor-lightcolor "#1d1d1e"
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+set window-height 3000
+set window-width 3000
+
+# One page per row by default
+set pages-per-row 1
+
+#stop at page boundries
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+
+#zoom settings
+set zoom-min 10
+
+
+set render-loading "false"
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
