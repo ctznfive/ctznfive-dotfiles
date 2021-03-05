@@ -210,7 +210,7 @@ interval=persist
 command=date '+[ %d/%m %a      %H:%M ]    '
 align=center
 interval=1
-color=#86ccfc
+color=#99c2de
 
 
 # Generic media player support
