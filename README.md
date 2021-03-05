@@ -33,10 +33,11 @@ You can use configuration files without any restrictions.
 | **Web Browser**          | firefox / eww                 										                             |
 | **Office Suite**           | libreoffice                     										                             |
 | **Brainstorming**        | orgmode / libreoffice draw                    										                             |
-| **Backup Solution**      | rsync + clonezilla                    										                             |
+| **Backup Solution**      | rsync + borg                    										                             |
 | **GTD, PIM & Notes**   | orgmode                    										                             |
 | **Hosted Hypervisor**   | virtualbox / qemu  |
 | **Password Manager**   | pass / orgmode  |
+| **File Synchronization**   | syncthing / git-annex  |
 
 
 # Screenshots
