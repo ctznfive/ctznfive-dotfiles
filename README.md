@@ -1,15 +1,14 @@
-# Personal preferences and dotfiles
+<p align="center"><img src="dotfiles.png"/></p>
+<p align="center"><b>Personal preferences and dotfiles</b></p>
 
-You can use configuration files without any restrictions.
-
-- I like simplicity and the KISS principle and don't use desktop environments.
-- I use mostly command-line FLOSS utilities in combination with dynamic tiling window manager.
-- The whole color palette was carefully created by me personally.
+---
 
 | System      | Repository Branch                                                      |
 |-------------|------------------------------------------------------------------------|
 | Arch        | [arch](https://github.com/ctznfive/ctznfive-dotfiles/tree/arch)        |
 | Debian      | [debian](https://github.com/ctznfive/ctznfive-dotfiles/tree/debian)    |
+
+---
 
 
 # Specification
@@ -39,6 +38,7 @@ You can use configuration files without any restrictions.
 | **Password Manager**   | pass / orgmode  |
 | **File Synchronization**   | syncthing / git-annex  |
 
+---
 
 # Screenshots
 ![screen1](screen1.png)
