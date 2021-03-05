@@ -1,4 +1,4 @@
-<p align="center"><img src="dotfiles.png"/></p>
+<p align="center"><img src="dot-files.png"/></p>
 <p align="center"><b>Personal preferences and dotfiles</b></p>
 
 ---
