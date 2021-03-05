@@ -1,8 +1,6 @@
 <p align="center"><img src="dot-files.png"/></p>
 <p align="center"><b>Personal preferences and dotfiles</b></p>
 
----
-
 | System      | Repository Branch                                                      |
 |-------------|------------------------------------------------------------------------|
 | Arch        | [arch](https://github.com/ctznfive/ctznfive-dotfiles/tree/arch)        |
