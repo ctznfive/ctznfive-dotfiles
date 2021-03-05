@@ -1,5 +1,3 @@
-# Personal preferences and dotfiles
-
 <p align="center"><img src="dot-files.png"/></p>
 
 | System      | Repository Branch                                                      |
@@ -35,7 +33,7 @@
 | **GTD, PIM & Notes**   | orgmode                    										                             |
 | **Hosted Hypervisor**   | virtualbox / qemu  |
 | **Password Manager**   | pass / orgmode  |
-| **File Synchronization**   | syncthing / git-annex  |
+| **File Synchronization**   | git-annex  |
 
 ---
 
