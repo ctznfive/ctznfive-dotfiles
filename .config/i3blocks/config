@@ -186,7 +186,7 @@ markup=pango
 command=date '+%a %d/%m  [ %H:%M ] '
 align=center
 interval=1
-color=#56a4db
+color=#6dafde
 
 
 # Generic media player support

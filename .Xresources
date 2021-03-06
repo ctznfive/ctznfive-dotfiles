@@ -8,7 +8,7 @@ URxvt*.transparent: true
 ! special
 *.foreground:   #ffffff
 *.background:   #1a1a1b
-*.cursorColor:  #56a4db
+*.cursorColor:  #6dafde
 
 ! black
 *.color0:       #1a1a1b
@@ -27,7 +27,7 @@ URxvt*.transparent: true
 *.color11:      #ffc1de
 
 ! blue
-*.color4:       #56a4db
+*.color4:       #6dafde
 *.color12:      #b3d9ff
 
 ! magenta
@@ -120,7 +120,7 @@ URxvt.keysym.Shift-Down:	command:\033]721;1\007
 
 rofi.color-enabled: true
 rofi.color-window: #1a1a1b, #1a1a1b, #1a1a1b
-rofi.color-normal: #1a1a1b, #d8dee9, #1a1a1b, #1a1a1b, #56a4db
+rofi.color-normal: #1a1a1b, #d8dee9, #1a1a1b, #1a1a1b, #6dafde
 rofi.color-active: #1a1a1b, #b48ead, #1a1a1b, #1a1a1b, #93e5cc
 rofi.color-urgent: #1a1a1b, #ebcb8b, #1a1a1b, #1a1a1b, #ebcb8b
 rofi.modi: run,drun,window
@@ -131,6 +131,6 @@ rofi.modi: run,drun,window
 
 dmenu.selforeground:	    #d8dee9
 dmenu.background:	        #1a1a1b
-dmenu.selbackground:	    #56a4db
+dmenu.selbackground:	    #6dafde
 dmenu.foreground:	        #ffffff
                                                            
