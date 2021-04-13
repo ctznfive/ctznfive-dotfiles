@@ -30,7 +30,7 @@
 | **Office Suite**           | libreoffice                     										                             |
 | **Brainstorming**        | orgmode / libreoffice draw                    										                             |
 | **Backup Solution**      | rsync + borg                    										                             |
-| **GTD, PIM & Notes**   | orgmode                    										                             |
+| **GTD, PIM & Notes**   | orgmode / taskell                   										                             |
 | **Hosted Hypervisor**   | virtualbox / qemu  |
 | **Password Manager**   | pass / orgmode  |
 | **File Synchronization**   | git-annex  |
