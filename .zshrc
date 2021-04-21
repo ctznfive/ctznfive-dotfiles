@@ -100,5 +100,5 @@ crypt() {
 }
 
 # Torrent
-torrent() { qbittorrent-nox -d "$1" && firefox 127.0.0.1:8080; }
+torrent() { qbittorrent-nox -d "$1" && firefox 127.0.0.1:8081; }
 
