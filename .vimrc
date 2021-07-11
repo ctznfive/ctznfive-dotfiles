@@ -17,6 +17,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'preservim/tagbar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -85,7 +86,7 @@ map <F6> :tabnext <CR>
 let g:tagbar_width=35
 highlight TagbarFoldIcon ctermfg=Black
 nmap <F10> :TagbarToggle<CR>
-autocmd FileType python,c,cpp,java TagbarOpen
+autocmd FileType python,c,cpp,java,go TagbarOpen
 set pastetoggle=<F3>
 let g:NERDTreeWinSize=25
 set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
