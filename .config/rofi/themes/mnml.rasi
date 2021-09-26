@@ -1,0 +1,62 @@
+configuration {
+  display-run: "> ";
+  display-drun: "> ";
+  display-window: "> ";
+  drun-display-format: "{name}";
+  modi: "window,run,drun";
+  show-icons: false;
+}
+
+* {
+
+  bg: #0d0d0e;
+  bg-alt: #1d1d1e;
+  text-color: #eeeeee;
+
+  fg: #eeeeee;
+  fg-alt: #eeeeee;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 5;
+  spacing: 0;
+  width: 75%;
+}
+
+element {
+  orientation: vertical;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+entry {
+  padding: 12 0 12 3;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  columns: 5;
+  lines: 15;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
