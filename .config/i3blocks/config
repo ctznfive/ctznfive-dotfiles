@@ -98,10 +98,10 @@ label=
 #DIR=/mnt/data
 interval=60
 
-[disk/disk]
-label=++  
-instance=/mnt/hdd
-interval=60
+#[disk/disk]
+#label=++  
+#instance=/mnt/hdd
+#interval=60
 
 # Network interface monitoring
 #

@@ -31,9 +31,11 @@ exec --no-startup-id xrdb .Xresources &
 exec --no-startup-id udiskie -an &
 exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
 #exec --no-startup-id blueman-applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 exec --no-startup-id goldendict
+exec --no-startup-id megasync
+exec --no-startup-id /home/ctznfive/.dropbox-dist/dropboxd
 #exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
 #exec --no-startup-id i3-msg 'workspace 2; exec emacs'
 #exec --no-startup-id i3-msg 'workspace 10; exec /usr/bin/firefox'
@@ -53,20 +55,21 @@ bindsym $super+Return exec urxvt
 #bindsym $super+Delete exec --no-startup-id "i3lock -c 000000"
 
 # start dmenu/rofi
-bindsym $super+d exec rofi -lines 12 -padding 20 -width 50 -location 0 -show drun -columns 4 -font 'Noto Sans 14' -hide-scrollbar
+# bindsym $super+d exec rofi -lines 12 -padding 20 -width 50 -location 0 -show drun -columns 4 -font 'Noto Sans 14' -hide-scrollbar
+#bindsym $super+d exec rofi -show drun -theme sidebar -font 'Noto Sans 14' -hide-scrollbar
+bindsym $super+d exec rofi -show drun -theme mnml -font 'Noto Sans 14' -hide-scrollbar
 bindsym $super+shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -sb '#6dafde' -sf '#1a1a1b' -fn 'Roboto:size=12'"
 
 # common apps keybind
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
-bindsym $super+F1 workspace 2; exec emacsclient -c; focus
+bindsym $super+F1 workspace 2; exec emacs; focus
 bindsym $super+F2 workspace 10; exec firefox; focus
 bindsym $super+F3 workspace 9; exec telegram-desktop; focus
 bindsym $super+F4 workspace 9; exec urxvt -e mutt; focus
-bindsym $super+F5 exec passmenu
+bindsym $super+F5 exec keepassxc; focus
 bindsym $super+Shift+n exec xrandr --output DP-1 --brightness 0.8 # night mode
 bindsym $super+Shift+b exec xrandr --output DP-1 --brightness 1.0 # day mode
-bindsym $super+i exec urxvt -e vim '+normal G2o' +.\!date '+normal o' +startinsert ~/inbox/inbox.txt
 
 # change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
@@ -178,7 +181,7 @@ bindsym $super+r mode "resize"
 # panel
 bar {
 	position top
-    tray_output none # disable the systemtray completely
+#   tray_output none # disable the systemtray completely
 	colors {
         background #1a1a1b
         statusline #aaaaaa

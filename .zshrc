@@ -1,9 +1,10 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 plugins=(
     git
-    sudo
     colorize
     vi-mode
     colored-man-pages
@@ -21,7 +22,6 @@ ZSH_THEME=""
 
 export VISUAL="vim"
 export EDITOR="$VISUAL"
-export PASSWORD_STORE_DIR="/home/ctznfive/reference/.pass"
 
 # Disable % eof
 unsetopt prompt_cr prompt_sp
@@ -55,27 +55,23 @@ alias ll='ls -Fhl --group-directories-first --color=auto'
 alias i='cd ~/inbox && ls -1'
 alias s='cd ~/support && ls -1'
 alias r='cd ~/reference && ls -1'
+alias m='cd ~/MEGA && ls -1'
+alias gtd='cd ~/Dropbox && ls -1'
 alias grep='grep --color=auto'
 alias v='vim'
 alias e='emacsclient -c'
 alias uu='udiskie-umount --detach'
-alias gm='cd /run/media/ctznfive && ls -1'
-alias cs='cd ~/reference/coding/CS && ls -1'
-alias ds='cd ~/reference/coding/DS && ls -1'
-alias hc='cd ~/reference/coding/HACK && ls -1'
+alias gm='cd /run/media && ls -1'
 alias t='tree'
 alias rr='ranger ~/inbox'
 alias calc='bc -l'
 alias autoremove='sudo pacman -Rns $(pacman -Qqdt)'
-alias bckup='rsync -avh --delete /home/ctznfive/ /mnt/hdd/home_backup/'
 alias bckup-ext='rsync -avh --delete /home/ctznfive/ /run/media/ctznfive/BACKUP/HOME/pc_arch/'
 alias moshphone='mosh --ssh="ssh -p 8022" 192.168.0.125'
-alias gtdmosh="rsync -av -e 'ssh -p 8022' 192.168.0.125:/sdcard/gtd ~/inbox/"
-alias gtdup='adb pull /sdcard/gtd ~/inbox/'
-alias mus='mpv --shuffle --no-video ~/reference/music'
-alias ghdd='cd /mnt/hdd'
-alias off='bckup && systemctl poweroff'
-alias inb='cat >> ~/inbox/inbox.txt'
+#alias gtdmosh="rsync -av -e 'ssh -p 8022' 192.168.0.125:/sdcard/gtd ~/inbox/"
+#alias gtdup='adb pull /sdcard/gtd ~/inbox/'
+alias mus='mpv --shuffle --no-video ~/MEGA/music'
+alias off='systemctl poweroff'
 alias timer='sleep 3000 && zathura &'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
@@ -104,7 +100,4 @@ crypt() {
 	else veracrypt -t -k "" --pim=0 --protect-hidden=no --mount-options=timestamp "$1" /mnt/veracrypt$2 && cd /mnt/veracrypt$2 && ls -1
 	fi
 }
-
-# Torrent
-torrent() { qbittorrent-nox -d "$1" && firefox 127.0.0.1:8080; }
 
