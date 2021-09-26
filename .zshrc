@@ -1,9 +1,8 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin
 export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
     git
-    sudo
     zsh-autosuggestions
     colorize
     vi-mode
@@ -20,7 +19,6 @@ ZSH_THEME=""
 
 export VISUAL="vim"
 export EDITOR="$VISUAL"
-export PASSWORD_STORE_DIR="/home/ctznfive/reference/.pass"
 
 # Disable % eof
 unsetopt prompt_cr prompt_sp
@@ -54,26 +52,25 @@ alias ll='ls -Fhl --group-directories-first --color=auto'
 alias i='cd ~/inbox && ls -1'
 alias s='cd ~/support && ls -1'
 alias r='cd ~/reference && ls -1'
+alias m='cd ~/MEGA && ls -1'
+alias gtd='cd ~/Dropbox && ls -1'
 alias grep='grep --color=auto'
 alias v='vim'
 alias e='emacsclient -c'
 alias uu='udiskie-umount --detach'
 alias gm='cd /media/ctznfive && ls -1'
-alias cs='cd ~/reference/coding/CS && ls -1'
-alias ds='cd ~/reference/coding/DS && ls -1'
-alias hc='cd ~/reference/coding/HACK && ls -1'
 alias t='tree'
 alias rr='ranger ~/inbox'
 alias calc='bc -l'
 alias bckup-ext='rsync -avh --delete /home/ctznfive/ /media/ctznfive/BACKUP/HOME/thinkpad_debian/'
-alias mus='mpv --shuffle --no-video ~/reference/music'
+alias mus='mpv --shuffle --no-video ~/MEGA/music'
 alias moshphone='mosh --ssh="ssh -p 8022" 192.168.0.125'
-alias gtdmosh="rsync -av -e 'ssh -p 8022' 192.168.0.125:/sdcard/gtd ~/inbox/"
-alias gtdup='adb pull /sdcard/gtd ~/inbox/'
+#alias gtdmosh="rsync -av -e 'ssh -p 8022' 192.168.0.125:/sdcard/gtd ~/inbox/"
+#alias gtdup='adb pull /sdcard/gtd ~/inbox/'
 alias noise='play -q -c 2 --null synth brownnoise band -n 2500 4000 tremolo 20 .1 reverb 50'
-alias inb='cat >> ~/inbox/inbox.txt'
 alias timer='sleep 3000 && zathura &'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias off='systemctl poweroff'
 
 # use "c" for ls after cd
 c() { cd "$1" && ls -1; }
@@ -99,6 +96,17 @@ crypt() {
 	fi
 }
 
-# Torrent
-torrent() { qbittorrent-nox -d "$1" && firefox 127.0.0.1:8081; }
-
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ctznfive/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ctznfive/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ctznfive/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ctznfive/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

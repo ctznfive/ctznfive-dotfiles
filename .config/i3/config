@@ -28,6 +28,8 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 exec --no-startup-id goldendict
+exec --no-startup-id megasync
+exec --no-startup-id /home/ctznfive/.dropbox-dist/dropboxd
 exec --no-startup-id i3-msg 'workspace 1; exec rxvt-unicode'
 exec --no-startup-id i3-msg 'workspace 2; exec emacs'
 exec --no-startup-id i3-msg 'workspace 10; exec /usr/bin/firefox'
@@ -53,15 +55,15 @@ bindsym $super+d exec rofi -lines 12 -padding 18 -width 70 -location 0 -show dru
 # common apps keybind
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
-bindsym $super+F1 workspace 2; exec emacsclient -c; focus
+bindsym $super+F1 workspace 2; exec emacs; focus
 bindsym $super+F2 workspace 10; exec firefox; focus
 bindsym $super+F3 workspace 9; exec telegram; focus
 bindsym $super+F4 workspace 9; exec rxvt-unicode -e mutt; focus
-bindsym $super+F5 exec passmenu
+bindsym $super+F5 exec keepassx; focus
 bindsym $super+Shift+n exec xrandr --output LVDS1 --brightness 0.8 # night mode
 bindsym $super+Shift+b exec xrandr --output LVDS1 --brightness 1.0 # day mode
 #bindsym $super+i exec rxvt-unicode -e vim ~/inbox/inbox.txt
-bindsym $super+i exec rxvt-unicode -e vim '+normal G2o' +.\!date '+normal o' +startinsert ~/inbox/inbox.txt
+#bindsym $super+i exec rxvt-unicode -e vim '+normal G2o' +.\!date '+normal o' +startinsert ~/inbox/inbox.txt
 
 # change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
@@ -71,9 +73,9 @@ bindsym $super+equal exec amixer -q set Master 1%+
 bindsym $super+minus exec amixer -q set Master 1%-
 
 # music control
-bindsym $super+b exec mocp -r
-bindsym $super+n exec mocp -f
-bindsym $super+p exec mocp -G
+#bindsym $super+b exec mocp -r
+#bindsym $super+n exec mocp -f
+#bindsym $super+p exec mocp -G
 
 # media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -171,7 +173,7 @@ bindsym $super+r mode "resize"
 # panel
 bar {
 	position top
-    tray_output none # disable the systemtray completely
+#   tray_output none # disable the systemtray completely
 	colors {
         background #1a1a1b
         statusline #aaaaaa
