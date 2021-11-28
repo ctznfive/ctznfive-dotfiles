@@ -3,7 +3,8 @@
 ! ------------------------------------------------------------------------------
 
 URxvt*.transparent: true
-!URxvt*.shading: 80
+!URxvt*.shading: 60
+!URxvt*.shading: 30
 
 ! special
 *.foreground:   #ffffff
