@@ -37,9 +37,9 @@ exec --no-startup-id goldendict
 exec --no-startup-id megasync
 exec --no-startup-id /home/ctznfive/.dropbox-dist/dropboxd
 #exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
-#exec --no-startup-id i3-msg 'workspace 2; exec emacs'
+#exec --no-startup-id i3-msg 'workspace 9; exec emacs'
+#exec --no-startup-id i3-msg 'workspace 9; exec telegram-desktop -startintray'
 #exec --no-startup-id i3-msg 'workspace 10; exec /usr/bin/firefox'
-#exec --no-startup-id i3-msg 'workspace 10; exec telegram-desktop -startintray'
 
 # scratchpad
 bindsym $super+e scratchpad show
@@ -63,7 +63,7 @@ bindsym $super+shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -sb '#6dafde' -sf
 # common apps keybind
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
-bindsym $super+F1 workspace 2; exec emacs; focus
+bindsym $super+F1 workspace 9; exec emacs; focus
 bindsym $super+F2 workspace 10; exec firefox; focus
 bindsym $super+F3 workspace 9; exec telegram-desktop; focus
 bindsym $super+F4 workspace 9; exec urxvt -e mutt; focus
@@ -199,9 +199,9 @@ bar {
 for_window [class=".*"] border pixel 4
 
 # colour of border, background, text, indicator, and child_border
-client.focused			#6dafde #2f343f #d8dee8 #6dafde #777777
+client.focused			#6dafde #2f343f #d8dee8 #6dafde #999999
 client.focused_inactive	#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
-client.unfocused		#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
+client.unfocused		#2f343f #2f343f #d8dee8 #2f343f #444444
 client.urgent			#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
 client.placeholder		#2f343f #2f343f #d8dee8 #2f343f #1a1a1b
 client.background		#1a1a1b

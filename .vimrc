@@ -28,7 +28,7 @@ call plug#end()
 syntax enable
 let g:asmsyntax = 'nasm'
 set clipboard=unnamedplus
-hi Normal     ctermbg=black
+"hi Normal     ctermbg=black
 hi SignColumn guibg=black ctermbg=black
 "set encoding=UTF-8
 "let g:auto_save = 1  " enable AutoSave on Vim startup
