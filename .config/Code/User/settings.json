@@ -1,0 +1,30 @@
+{
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "workbench.sideBar.location": "right",
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Panda Syntax",
+    "editor.fontSize": 17.5,
+    "editor.fontFamily": "'Iosevka Semibold Extended', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorCustomizations": {
+
+        "editor.background": "#1A1A1B",
+        "editor.selectionBackground": "#444",
+        "editorCursor.foreground": "#2491eb",
+        "editorWhitespace.foreground": "#333"
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.showTabs": false,
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "solid",
+    "editor.guides.highlightActiveIndentation": false,
+    "terminal.integrated.fontSize": 16,
+    "editor.wordWrap": "on",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.rulers": [80]
+}
