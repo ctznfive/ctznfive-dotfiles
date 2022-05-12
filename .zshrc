@@ -159,7 +159,7 @@ alias calc='bc -l'
 alias bckup-ext='rsync -avh --delete /home/ctznfive/ /run/media/ctznfive/BACKUP/HOME/t480s/'
 alias mus='mpv --shuffle --no-video ~/MEGA/music'
 alias off='systemctl poweroff'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
 
 # use "c" for ls after cd
 c() { cd "$1" && ls -1; }
