@@ -1,0 +1,6 @@
+feh -B #1a1a1b \
+-d \
+-N \
+-F \
+--geometry 100x100 \
+--auto-zoom

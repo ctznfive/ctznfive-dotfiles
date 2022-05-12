@@ -1,0 +1,13 @@
+background-color=#222222
+text-color=#cccccc
+border-color=#111111
+
+default-timeout=10000
+ignore-timeout=1
+
+font=Iosevka Term 14
+
+padding=10
+
+[mode=do-not-disturb]
+invisible=1

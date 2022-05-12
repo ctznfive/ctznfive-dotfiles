@@ -1,0 +1,87 @@
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://ctznfive@gmail.com@smtp.gmail.com:465/"
+set imap_user = "ctznfive@gmail.com"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+bind index G imap-fetch-mail
+set charset = "utf-8"
+set record = ''
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+
+
+# old unread messages
+color index green default "~O"
+
+# new unread messages
+color index brightgreen default "~N"
+
+# messages to me
+color index cyan default "~p"
+color index brightcyan default "~p~O"
+color index brightcyan default "~p~N"
+
+# messages from me
+color index yellow default "~P"
+
+# tagged messages
+color index red default "~T"
+
+# messages about to be deleted
+color index brightyellow default "~D"
+
+# message displaying settings
+color hdrdefault green default
+color header brightgreen default ^Subject:
+color quoted cyan default
+color signature red default
+
+set editor="nvim"
+
+# disable artifitial pauses
+set sleep_time = 0
+
+# gpg config
+#set imap_pass = "`gpg --use-agent --quiet --batch -d ~/.mutt/password.gpg`"
+#set smtp_pass = "`gpg --use-agent --quiet --batch -d ~/.mutt/password.gpg`"
+
+# encrypted IMAP/SMTP passwords
+source "gpg -d ~/.mutt/password.gpg |"
+
+# gmail-style keyboard shortcuts
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gt "<change-folder>=[Gmail]/Trash<enter>" "Go to trash"
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+
+# theme
+source ~/.mutt/dracula.muttrc
+
+
+# sidebar patch
+set sidebar_visible = yes
+set sidebar_width   = 20
+
+# sidebar navigation
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right> sidebar-open
+
+# Mailboxes to show in the sidebar.
+mailboxes =INBOX
+mailboxes =1_SUPPORT
+mailboxes =2_REFERENCE
+
+
+set mailcap_path  = ~/.mailcap
+
+# open in gui browser: hit "v" then go down to text/html then hit "m" or "Enter"
+bind attach <return> view-mailcap
+auto_view text/html                                      # view html automatically
+alternative_order text/plain text/enriched text/html     # list html for last

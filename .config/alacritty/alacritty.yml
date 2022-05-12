@@ -1,0 +1,51 @@
+window:
+  padding:
+    x: 2
+    y: 2
+  dynamic_padding: true
+  opacity: 0
+
+# Fonts
+font:
+  normal:
+    family: Iosevka Term
+    style: Semibold
+
+  bold:
+    family: Iosevka Term
+    style: Bold
+
+  italic:
+    family: Iosevka Term
+    style: Italic
+
+  bold_italic:
+    family: Iosevka Term
+    style: Bold Italic
+
+  size: 18
+
+colors:
+  primary:
+    background: '#1D1D1E'
+    foreground: '#E6E6E6'
+
+  normal:
+    black:   '#292A2B'
+    red:     '#FF2C6D'
+    green:   '#19f9d8'
+    yellow:  '#FFB86C'
+    blue:    '#45A9F9'
+    magenta: '#FF75B5'
+    cyan:    '#67d3c2'
+    orange:  '#B084EB'
+    white:   '#E6E6E6'
+  bright:
+    black:   '#292A2B'
+    red:     '#FF2C6D'
+    green:   '#19f9d8'
+    yellow:  '#ffcc95'
+    blue:    '#6FC1FF'
+    magenta: '#FF9AC1'
+    cyan:    '#67d3c2'
+    white:   '#ffffff'

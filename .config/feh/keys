@@ -1,0 +1,27 @@
+save_filelist
+toggle_fullscreen f
+
+#UNMAPPING
+
+next_img
+prev_img
+zoom_out
+zoom_in
+scroll_right
+scroll_left
+scroll_up
+scroll_down
+save_image
+delete
+
+
+#REMAPPING
+
+next_img l
+prev_img h
+zoom_out j
+zoom_in k
+scroll_right L
+scroll_left H
+scroll_up K
+scroll_down J
